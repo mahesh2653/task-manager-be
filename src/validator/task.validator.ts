@@ -4,7 +4,7 @@ const taskSchema = Joi.object({
   title: Joi.string().required(),
   description: Joi.string().required(),
   status: Joi.boolean().optional(),
-  userId: Joi.number().required(),
+  userId: Joi.string().required(),
 });
 
 export default taskSchema;

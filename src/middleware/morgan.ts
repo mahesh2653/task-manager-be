@@ -1,9 +1,8 @@
 import morgan, { StreamOptions } from "morgan";
 import logger from "../utils/winston";
 
-// Changing from default console log to stream
 const stream: StreamOptions = {
-  write: (message) => logger.http(message), // Using Winston Logger http severity
+  write: (message) => logger.http(message),
 };
 
 const morganMiddleware = morgan(

@@ -58,6 +58,7 @@ export default class UserController {
           status: 404,
           message: "User not found",
         });
+        return;
       }
       if (!userData) {
         throw Error("Before login register first ");
@@ -69,6 +70,7 @@ export default class UserController {
         res
           .status(403)
           .json({ status: 403, message: "Invalid email and password" });
+        return;
       }
 
       const payload = {
